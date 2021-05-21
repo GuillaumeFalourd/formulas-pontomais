@@ -1,0 +1,29 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [
+    {
+      "cache": {
+        "active": true,
+        "newLabel": "Type new value. ",
+        "qty": 3
+      },
+      "label": "Type your email: ",
+      "name": "rit_input_email",
+      "required": true,
+      "tutorial": "Your prefer email",
+      "type": "text"
+    },
+    {
+      "cache": {
+        "active": true,
+        "newLabel": "Type new value. ",
+        "qty": 3
+      },
+      "label": "Type your password: ",
+      "name": "rit_input_password",
+      "required": true,
+      "tutorial": "Your prefer password",
+      "type": "password"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-go-builder",
+  "autoBuildOnRelease": true,
+  "inputs": [
+    {
+      "name": "rit_pontomais_login",
+      "type": "CREDENTIAL_PONTOMAIS_LOGIN"
+    },
+    {
+      "name": "rit_pontomais_password",
+      "type": "CREDENTIAL_PONTOMAIS_PASSWORD"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-go-builder",
+  "autoBuildOnRelease": true,
+  "inputs": [
+    {
+      "default": "Ultimo mes",
+      "items": [
+        "Ultima semana",
+        "Ultima quinzena",
+        "Ultimo mes",
+        "Outros"
+      ],
+      "label": "Período: ",
+      "name": "rit_period",
+      "required": false,
+      "type": "text"
+    },
+    {
+      "label": "Data de início (yyyy-mm-dd): ",
+      "name": "rit_start_date",
+      "type": "text",
+      "required": true,
+      "pattern": {
+        "regex": "([0-9]{4})-([0-9]{2})-([0-9]{2})",
+        "mismatchText": "Entre com uma data no formato yyyy-mm-dd"
+      },
+      "condition": {
+        "variable": "rit_period",
+        "operator": "==",
+        "value": "Outros"
+      }
+    },
+    {
+      "label": "Data de término (yyyy-mm-dd): ",
+      "name": "rit_end_date",
+      "type": "text",
+      "required": true,
+      "pattern": {
+        "regex": "([0-9]{4})-([0-9]{2})-([0-9]{2})",
+        "mismatchText": "Entre com uma data no formato yyyy-mm-dd"
+      },
+      "condition": {
+        "variable": "rit_period",
+        "operator": "==",
+        "value": "Outros"
+      }
+    },
+    {
+      "name": "rit_pontomais_login",
+      "type": "CREDENTIAL_PONTOMAIS_LOGIN"
+    },
+    {
+      "name": "rit_pontomais_password",
+      "type": "CREDENTIAL_PONTOMAIS_PASSWORD"
+    }
+  ]
+}
